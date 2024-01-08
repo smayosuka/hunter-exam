@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User dashboard</title>
+    </head>
+
+    <body>
+        <p>Dashboard</p>
+
+        <a href = "/logout">Logout</a>
+
+        <p>Halo, <%= it.username %></p>
+
+        <p>Waktu kunjungan Anda dan header Anda:</p>
+        <% Object.keys(it.visits).forEach(function(visit) { %>
+            <code><%= visit %>: <%= it.visits[visit] %></code>
+            <br>
+        <% }) %>
+    </body>
+</html>
